@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelancer Portfolio – Web Development</title>
+
+<style>
+/* ---------------- GLOBAL STYLE ---------------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #121212;
+    color: white;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #1e90ff, #0066cc);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+header p {
+    margin-top: 10px;
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* NAVIGATION */
+nav {
+    background: #1f1f1f;
+    padding: 12px;
+    text-align: center;
+}
+
+nav button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+nav button:hover {
+    background: #0066cc;
+}
+
+/* SECTIONS */
+section {
+    display: none;
+    padding: 40px;
+}
+
+.active {
+    display: block;
+}
+
+/* SKILLS LIST */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skill-item {
+    padding: 14px;
+    background: #222;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.skill-item:hover {
+    background: #0066cc;
+}
+
+/* PROJECT LIST */
+.proj-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.proj-item {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.proj-item:hover {
+    border-color: #0066cc;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.1rem;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Michael – Web Developer & UI Specialist</h1>
+    <p>I build clean, modern & high-performance websites for your business.</p>
+</header>
+
+<nav>
+    <button onclick="openTab('skills')">Skills</button>
+    <button onclick="openTab('completed')">Completed Projects</button>
+    <button onclick="openTab('progress')">In Progress</button>
+    <button onclick="openTab('contact')">Contact</button>
+</nav>
+
+<!-- ---------------- SKILLS ---------------- -->
+<section id="skills" class="active">
+    <h2>My Skills</h2>
+    <p>I offer a complete modern web development stack:</p>
+
+    <div class="skill-grid">
+        <div class="skill-item">HTML5</div>
+        <div class="skill-item">CSS3</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">Responsive Design</div>
+        <div class="skill-item">UI/UX Design</div>
+        <div class="skill-item">Mobile Layouts</div>
+        <div class="skill-item">Flexbox & Grid</div>
+        <div class="skill-item">Animations</div>
+        <div class="skill-item">Landing Pages</div>
+        <div class="skill-item">Portfolio Pages</div>
+        <div class="skill-item">Business Websites</div>
+        <div class="skill-item">SEO Optimization</div>
+        <div class="skill-item">Bug Fixing</div>
+        <div class="skill-item">Page Optimization</div>
+        <div class="skill-item">API Integration</div>
+        <div class="skill-item">JavaScript Interactions</div>
+    </div>
+</section>
+
+<!-- ---------------- COMPLETED PROJECTS ---------------- -->
+<section id="completed">
+    <h2>Completed Projects</h2>
+    <p>Here you can find a selection of my finished work:</p>
+
+    <div class="proj-list">
+        <div class="proj-item">AAA | Modern Landing Page</div>
+        <div class="proj-item">AAA | Automotive Showroom Website</div>
+        <div class="proj-item">AAA | Real Estate Portal Layout</div>
+        <div class="proj-item">AAA | Modern Business Portfolio</div>
+        <div class="proj-item">AAA | Dynamic Product Catalog</div>
+    </div>
+</section>
+
+<!-- ---------------- IN PROGRESS ---------------- -->
+<section id="progress">
+    <h2>Work in Progress</h2>
+    <p>Current ongoing projects:</p>
+
+    <div class="proj-list">
+        <div class="proj-item">AAA | Real Estate UI System</div>
+        <div class="proj-item">AAA | Car Dealer „Rally Modern“ Design</div>
+        <div class="proj-item">AAA | Multi-Layout Theme Module</div>
+        <div class="proj-item">AAA | API Safe-Frontend Interface</div>
+    </div>
+</section>
+
+<!-- ---------------- CONTACT ---------------- -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to contact me anytime for your project needs.</p>
+
+    <p>Email: <b>yourmail@example.com</b></p>
+    <p>Fiverr / Upwork / Freelancer links can be added here.</p>
+</section>
+
+<footer>© 2025 Michael – Freelance Web Developer</footer>
+
+<script>
+function openTab(tab) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(tab).classList.add("active");
+}
+</script>
+
+</body>
+</html>
